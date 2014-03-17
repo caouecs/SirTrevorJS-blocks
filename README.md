@@ -7,3 +7,4 @@ Blocks for different uses
  * Gettyimages : embed images from Getty
  * Slideshare : embed slide from Slideshare
  * Facebook : embed post from Facebook
+ * Video : for more providers (vevo, veho, yahoo...)

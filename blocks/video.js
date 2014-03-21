@@ -5,11 +5,11 @@ SirTrevor.Blocks.Video = (function(){
     // Based on https://gist.github.com/jeffling/a9629ae28e076785a14f
     providers: {
       vimeo: {
-        regex: /(?:http[s]?:\/\/)?(?:www.)?vimeo.com\/(.+)/,
+        regex: /(?:http[s]?:\/\/)?(?:www.)?vimeo.com\/([[:digit:]]*)/,
         html: "<iframe src=\"{{protocol}}//player.vimeo.com/video/{{remote_id}}?title=0&byline=0\" width=\"580\" height=\"320\" frameborder=\"0\"></iframe>"
       },
       youtube: {
-        regex: /(?:http[s]?:\/\/)?(?:www.)?(?:(?:youtube.com\/watch\?(?:.*)(?:v=))|(?:youtu.be\/))([^&].+)/,
+        regex: /(?:http[s]?:\/\/)?(?:www.)?(?:(?:youtube.com\/watch\?(?:.*)(?:v=))|(?:youtu.be\/))(?:(.+)(?:&list=(?:.*))|(.+))/,
         html: "<iframe src=\"{{protocol}}//www.youtube.com/embed/{{remote_id}}\" width=\"580\" height=\"320\" frameborder=\"0\" allowfullscreen></iframe>"
       },
       vine: {
@@ -22,7 +22,7 @@ SirTrevor.Blocks.Video = (function(){
         html: "<iframe src=\"{{protocol}}//www.dailymotion.com/embed/video/{{remote_id}}\" width=\"580\" height=\"320\" frameborder=\"0\"></iframe>"
       },
       metacafe: {
-        regex: /(?:http[s]?:\/\/)?(?:www.)?metacafe.com\/watch\/(.+)\/(?:.+)\//,
+        regex: /(?:http[s]?:\/\/)?(?:www.)?metacafe.com\/watch\/([[:digit:]]*)/,
         html: "<iframe src=\"{{protocol}}//www.metacafe.com/embed/{{remote_id}}/\" width=\"540\" height=\"304\" allowFullScreen frameborder=0></iframe>"
       },
       yahoo: {
@@ -33,8 +33,12 @@ SirTrevor.Blocks.Video = (function(){
         regex: /(?:http[s]?:\/\/)?(?:www.)?ustream.tv\/channel\/(.+)/,
         html: "<iframe width=\"640\" height=\"392\" src=\"{{protocol}}//www.ustream.tv/embed/{{remote_id}}?v=3&amp;wmode=direct\" scrolling=\"no\" frameborder=\"0\" style=\"border: 0px none transparent;\"></iframe>"
       },
+      ustreamrecord: {
+        regex: /(?:http[s]?:\/\/)?(?:www.)?ustream.tv\/recorded\/(.+)/,
+        html: "<iframe width=\"640\" height=\"392\" src=\"{{protocol}}//www.ustream.tv/embed/recorded/{{remote_id}}?v=3&amp;wmode=direct\" scrolling=\"no\" frameborder=\"0\" style=\"border: 0px none transparent;\"></iframe>"
+      },
       veoh: {
-        regex: /(?:http[s]?:\/\/)?(?:www.)?veoh.com\/watch\/(.+)/,
+        regex: /(?:http[s]?:\/\/)?(?:www.)?veoh.com\/watch\/([[:alnum:]]*)/,
         html: "<object width=\"640\" height=\"532\" id=\"veohFlashPlayer\" name=\"veohFlashPlayer\"><param name=\"movie\" value=\"http://www.veoh.com/swf/webplayer/WebPlayer.swf?version=AFrontend.5.7.0.1444&amp;permalinkId={{remote_id}}&amp;player=videodetailsembedded&amp;videoAutoPlay=0&amp;id=anonymous\"></param><param name=\"allowFullScreen\" value=\"true\"></param><param name=\"allowscriptaccess\" value=\"always\"></param><embed src=\"http://www.veoh.com/swf/webplayer/WebPlayer.swf?version=AFrontend.5.7.0.1444&amp;permalinkId={{remote_id}}&amp;player=videodetailsembedded&amp;videoAutoPlay=0&amp;id=anonymous\" type=\"application/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"640\" height=\"532\" id=\"veohFlashPlayerEmbed\" name=\"veohFlashPlayerEmbed\"></embed></object>"
       },
       vevo: {
@@ -42,7 +46,7 @@ SirTrevor.Blocks.Video = (function(){
         html: "<iframe width=\"575\" height=\"324\" src=\"http://cache.vevo.com/m/html/embed.html?video={{remote_id}}\" frameborder=\"0\" allowfullscreen></iframe>"
       },
       aol: {
-        regex: /(?:http[s]?:\/\/)on.aol.com\/video(?:.*)-(.+)(?:\?.*)/,
+        regex: /(?:http[s]?:\/\/)on.aol.com\/video(?:.*)-([[:digit:]]*)(?:\?.*)*/,
         html: "<script type=\"text/javascript\" src=\"http://pshared.5min.com/Scripts/PlayerSeed.js?sid=281&amp;width=560&amp;height=345&amp;playList={{remote_id}}\"></script>"
       },
       metatube: {

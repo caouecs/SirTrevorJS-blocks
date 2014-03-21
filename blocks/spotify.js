@@ -3,7 +3,7 @@ SirTrevor.Blocks.Spotify = (function(){
   return SirTrevor.Block.extend({
 
     provider: {
-      regex: /play.spotify.com\/track\/(.+)/,
+      regex: /play.spotify.com\/track\/([[:alnum:]]*)/,
       html: "<iframe src=\"https://embed.spotify.com/?uri=spotify:track:{{remote_id}}\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"></iframe>"
     },
 

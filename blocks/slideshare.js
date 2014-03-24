@@ -16,7 +16,7 @@ SirTrevor.Blocks.Slideshare = (function(){
       html: "<div style=\"text-align:center; padding:20px;\">Enter <b>Slideshare</b> code for Wordpress.com blogs (ex: [slideshare id=...)<br /><input type=\"text\" class=\"st-paste-block\" style=\"width: 100%\" placeholder=\"Enter code for Wordpress\"></div>"
     },
 
-    icon_name: 'video',
+    icon_name: 'iframe',
 
     loadData: function(data) {
 

@@ -3,11 +3,11 @@ SirTrevorJS-blocks
 
 Blocks for different uses
 
- * Markdown : copy of Text block
+ * Facebook : embed post from Facebook
  * Gettyimages : embed images from Getty
+ * Pinterest : embed pin from Pinterest
  * Slideshare : embed slide from Slideshare
  * Spotify : embed track from Spotify
- * Facebook : embed post from Facebook
  * Video : for more providers (vevo, veho, yahoo...)
 
 ## Video
@@ -88,3 +88,8 @@ Blocks for different uses
  * https://www.youtube.com/watch?v=_E5M_uU5OB4&list=TLe3RlAqenodTfl0WyUxoQoCS8xFvoV9X1
  * https://www.youtube.com/watch?v=_E5M_uU5OB4
  * http://youtu.be/_E5M_uU5OB4
+
+## Changelog
+
+* v0.1.0
+    * initial version

@@ -4,7 +4,7 @@ SirTrevor.Blocks.Facebook = (function(){
 
     provider: {
       regex: /https:\/\/www.facebook.com\/(.+)\/posts\/(.+)" /,
-      html: "<div id=\"fb-root\"></div> <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id=id; js.src=\"//connect.facebook.net/en_GB/all.js#xfbml=1\"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script><div class=\"fb-post\" data-href=\"https://www.facebook.com/{{author}}/posts/{{remote_id}}\" data-width=\"466\" style=\"overflow-x: hidden;overflow-y:hidden; max-width: 100%;\"><div class=\"fb-xfbml-parse-ignore\"><a href=\"https://www.facebook.com/{{author}}/posts/{{remote_id}}\">Post</a> by <a href=\"https://www.facebook.com/{{author}}\">{{author}}</a>.</div></div>"
+      html: "<div style=\"text-align: center\"><div id=\"fb-root\"></div> <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id=id; js.src=\"//connect.facebook.net/en_GB/all.js#xfbml=1\"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script><div class=\"fb-post\" data-href=\"https://www.facebook.com/{{author}}/posts/{{remote_id}}\" data-width=\"466\" style=\"overflow-x: hidden;overflow-y:hidden; max-width: 100%;\"><div class=\"fb-xfbml-parse-ignore\"><a href=\"https://www.facebook.com/{{author}}/posts/{{remote_id}}\">Post</a> by <a href=\"https://www.facebook.com/{{author}}\">{{author}}</a>.</div></div></div>"
     },
 
     type: 'facebook',
@@ -19,8 +19,6 @@ SirTrevor.Blocks.Facebook = (function(){
     icon_name: 'image',
 
     loadData: function(data) {
-
-      this.$editor.addClass('st-block__editor--with-square-media');
 
       var embed_string = this.provider.html
         .replace('{{author}}', data.author)

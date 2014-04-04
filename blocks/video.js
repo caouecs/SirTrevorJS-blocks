@@ -5,11 +5,11 @@ SirTrevor.Blocks.Video = (function(){
     // Based on https://gist.github.com/jeffling/a9629ae28e076785a14f
     providers: {
       vimeo: {
-        regex: /(?:http[s]?:\/\/)?(?:www.)?vimeo.com\/([[:digit:]]*)/,
+        regex: /(?:http[s]?:\/\/)?(?:www.)?vimeo.com\/(.+)/,
         html: "<iframe src=\"{{protocol}}//player.vimeo.com/video/{{remote_id}}?title=0&byline=0\" width=\"580\" height=\"320\" frameborder=\"0\"></iframe>"
       },
       youtube: {
-        regex: /(?:http[s]?:\/\/)?(?:www.)?(?:(?:youtube.com\/watch\?(?:.*)(?:v=))|(?:youtu.be\/))(?:(.+)(?:&list=(?:.*))|(.+))/,
+        regex: /(?:http[s]?:\/\/)?(?:www.)?(?:(?:youtube.com\/watch\?(?:.*)(?:v=))|(?:youtu.be\/))([^&].+)/,
         html: "<iframe src=\"{{protocol}}//www.youtube.com/embed/{{remote_id}}\" width=\"580\" height=\"320\" frameborder=\"0\" allowfullscreen></iframe>"
       },
       vine: {
@@ -22,7 +22,7 @@ SirTrevor.Blocks.Video = (function(){
         html: "<iframe src=\"{{protocol}}//www.dailymotion.com/embed/video/{{remote_id}}\" width=\"580\" height=\"320\" frameborder=\"0\"></iframe>"
       },
       metacafe: {
-        regex: /(?:http[s]?:\/\/)?(?:www.)?metacafe.com\/watch\/([[:digit:]]*)/,
+        regex: /(?:http[s]?:\/\/)?(?:www.)?metacafe.com\/watch\/(.+)/,
         html: "<iframe src=\"{{protocol}}//www.metacafe.com/embed/{{remote_id}}/\" width=\"540\" height=\"304\" allowFullScreen frameborder=0></iframe>"
       },
       yahoo: {
@@ -46,7 +46,7 @@ SirTrevor.Blocks.Video = (function(){
         html: "<iframe width=\"575\" height=\"324\" src=\"http://cache.vevo.com/m/html/embed.html?video={{remote_id}}\" frameborder=\"0\" allowfullscreen></iframe>"
       },
       aol: {
-        regex: /(?:http[s]?:\/\/)on.aol.com\/video(?:.*)-([[:digit:]]*)(?:\?.*)*/,
+        regex: /(?:http[s]?:\/\/)on.aol.com\/video(?:.*)-(.+)(?:\?.*)*/,
         html: "<script type=\"text/javascript\" src=\"http://pshared.5min.com/Scripts/PlayerSeed.js?sid=281&amp;width=560&amp;height=345&amp;playList={{remote_id}}\"></script>"
       },
       metatube: {

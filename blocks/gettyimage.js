@@ -4,7 +4,7 @@ SirTrevor.Blocks.Gettyimages = (function(){
 
     provider: {
       regex: /embed\.gettyimages\.com\/embed\/(.+)" width/,
-      html: "<iframe src=\"//embed.gettyimages.com/embed/{{remote_id}}\" width=\"594\" height=\"465\" frameborder=\"0\" scrolling=\"no\"></iframe>"
+      html: "<div style=\"text-align:center;\"><iframe src=\"//embed.gettyimages.com/embed/{{remote_id}}\" width=\"594\" height=\"465\" frameborder=\"0\" scrolling=\"no\"></iframe></div>"
     },
 
     type: 'gettyimages',
@@ -19,8 +19,6 @@ SirTrevor.Blocks.Gettyimages = (function(){
     icon_name: 'image',
 
     loadData: function(data) {
-
-      this.$editor.addClass('st-block__editor--with-square-media');
 
       var embed_string = this.provider.html
         .replace('{{remote_id}}', data.remote_id);

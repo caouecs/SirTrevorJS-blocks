@@ -13,7 +13,7 @@ SirTrevor.Blocks.Gettyimages = (function(){
     pastable: true,
 
     paste_options: {
-      html: "<div style=\"text-align:center; padding:20px;\">Enter <b>GettyImages</b> embed code<br /><input type=\"text\" class=\"st-paste-block\" style=\"width: 100%\"></div>"
+      html: "<div style=\"text-align:center; padding:20px;\">Enter <b>GettyImages</b> embed code<br /><input type=\"text\" class=\"st-paste-block\" style=\"width: 90%\"></div>"
     },
 
     icon_name: 'image',

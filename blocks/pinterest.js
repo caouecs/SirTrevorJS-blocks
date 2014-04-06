@@ -15,7 +15,7 @@ SirTrevor.Blocks.Pinterest = (function(){
     pastable: true,
 
     paste_options: {
-      html: "<div style=\"text-align:center; padding:20px;\"><b>Pinterest</b><input type=\"text\" class=\"st-paste-block\" style=\"width: 100%\" placeholder=\"Enter code for Wordpress\"></div>"
+      html: "<div style=\"text-align:center; padding:20px;\"><b>Pinterest</b><input type=\"text\" class=\"st-paste-block\" style=\"width: 90%\" placeholder=\"Enter code for Wordpress\"></div>"
     },
 
     icon_name: 'image',

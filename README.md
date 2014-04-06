@@ -13,6 +13,7 @@ Blocks for different uses
 ## Video
 
  * aol
+ * canal plus
  * daily mail uk
  * dailymotion
  * metacafe
@@ -30,6 +31,10 @@ Blocks for different uses
 #### AOL On
 
  * http://on.aol.com/video/australia-checking-2-objects-in-search-for-plane-518166155?icid=OnHomepageSlide1_Img
+
+#### Canal Plus
+
+  need embed code
 
 #### Daily Mail UK
 
@@ -90,6 +95,9 @@ Blocks for different uses
  * http://youtu.be/_E5M_uU5OB4
 
 ## Changelog
+
+* v0.1.1
+    * add canal plus video
 
 * v0.1.0
     * initial version

@@ -60,6 +60,10 @@ SirTrevor.Blocks.Video = (function(){
       dailymailuk: {
         regex: /dailymail.co.uk\/video\/tvshowbiz\/video-(.+)\/(?:.+).html/,
         html: "<iframe frameborder=\"0\" width=\"698\" height=\"503\" scrolling=\"no\" id=\"molvideoplayer\" title=\"MailOnline Embed Player\" src=\"http://www.dailymail.co.uk/embed/video/{{remote_id}}.html\"></iframe>"
+      },
+      cplus: {
+        regex: /canalplus.fr\/embed\/\?param=cplus&vid=(.+)"><\/iframe/,
+        html: "<iframe width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" src=\"http://player.canalplus.fr/embed/?param=cplus&amp;vid={{remote_id}}\"></iframe>"
       }
     },
 

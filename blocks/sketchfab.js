@@ -1,26 +1,24 @@
-SirTrevor.Blocks.Spotify = (function(){
+SirTrevor.Blocks.Sketchfab = (function(){
 
   return SirTrevor.Block.extend({
 
     provider: {
-      regex: /play.spotify.com\/track\/([[:alnum:]]*)/,
-      html: "<iframe src=\"https://embed.spotify.com/?uri=spotify:track:{{remote_id}}\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"></iframe>"
+      regex: /sketchfab.com\/models\/(.+)\/embed/,
+      html: "<div style=\"text-align:center;\"><iframe  allowFullScreen webkitallowfullscreen mozallowfullscreen src=\"https://sketchfab.com/models/{{remote_id}}/embed\" width=\"640\" height=\"480\" frameborder=\"0\" scrolling=\"no\"></iframe></div>"
     },
 
-    type: 'spotify',
-    title: 'Spotify',
+    type: 'sketchfab',
+    title: 'Sketchfab',
 
     pastable: true,
 
     paste_options: {
-      html: "<div style=\"text-align:center; padding:20px;\">Enter <b>Spotify</b> link of track<br /><input type=\"text\" class=\"st-paste-block\" style=\"width: 100%\"></div>"
+      html: "<div style=\"text-align:center; padding:20px;\">Enter <b>Sketchfab</b> embed code<br /><input type=\"text\" class=\"st-paste-block\" style=\"width: 100%\"></div>"
     },
 
     icon_name: 'image',
 
     loadData: function(data) {
-
-      this.$editor.addClass('st-block__editor--with-square-media');
 
       var embed_string = this.provider.html
         .replace('{{remote_id}}', data.remote_id);

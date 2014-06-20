@@ -1,26 +1,24 @@
-SirTrevor.Blocks.Spotify = (function(){
+SirTrevor.Blocks.Issuu = (function(){
 
   return SirTrevor.Block.extend({
 
     provider: {
-      regex: /play.spotify.com\/track\/([[:alnum:]]*)/,
-      html: "<iframe src=\"https://embed.spotify.com/?uri=spotify:track:{{remote_id}}\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"></iframe>"
+      regex: /issuu.com\/(?:.+)e=(.+)/,
+      html: "<div data-configid=\"{{remote_id}}\" style=\"width: 525px; height: 353px;\" class=\"issuuembed\"></div><script type=\"text/javascript\" src=\"//e.issuu.com/embed.js\" async=\"true\"></script>"
     },
 
-    type: 'spotify',
-    title: 'Spotify',
+    type: 'issuu',
+    title: 'Issuu',
 
     pastable: true,
 
     paste_options: {
-      html: "<div style=\"text-align:center; padding:20px;\">Enter <b>Spotify</b> link of track<br /><input type=\"text\" class=\"st-paste-block\" style=\"width: 100%\"></div>"
+      html: "<div style=\"text-align:center; padding:20px;\">Enter <b>Issuu</b> link for embed code<br /><input type=\"text\" class=\"st-paste-block\" style=\"width: 100%\"></div>"
     },
 
     icon_name: 'image',
 
     loadData: function(data) {
-
-      this.$editor.addClass('st-block__editor--with-square-media');
 
       var embed_string = this.provider.html
         .replace('{{remote_id}}', data.remote_id);

@@ -85,6 +85,7 @@ Blocks for different uses
 
 #### Yahoo ! Screen
 
+ * https://news.yahoo.com/video/makeshift-stairs-wobbles-under-weight-184403276.html?format=embed&player_autoplay=false
  * http://screen.yahoo.com/popular/contestants-amazing-wheel-win-044013559.html
  * http://screen.yahoo.com/vevo/happy-despicable-2-pharrell-williams-221345442.html
 

@@ -26,7 +26,7 @@ SirTrevor.Blocks.Video = (function(){
         html: "<iframe src=\"{{protocol}}//www.metacafe.com/embed/{{remote_id}}/\" width=\"540\" height=\"304\" allowFullScreen frameborder=0></iframe>"
       },
       yahoo: {
-        regex: /(?:http[s]?:\/\/)screen.yahoo.com\/(.+).html/,
+        regex: /(?:http[s]?:\/\/)(?:.+).yahoo.com\/(?:video\/)?(.+).html/,
         html: "<iframe width=\"640\" height=\"360\" scrolling=\"no\" frameborder=\"0\" src=\"{{protocol}}//screen.yahoo.com/embed/{{remote_id}}.html\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\" allowtransparency=\"true\"></iframe>"
       },
       ustream: {
@@ -64,6 +64,10 @@ SirTrevor.Blocks.Video = (function(){
       cplus: {
         regex: /canalplus.fr\/embed\/\?param=cplus&vid=(.+)"><\/iframe/,
         html: "<iframe width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" src=\"http://player.canalplus.fr/embed/?param=cplus&amp;vid={{remote_id}}\"></iframe>"
+      }
+      francetv: {
+        regex: /api.dmcloud.net\/player\/embed\/(.+)?exported=1/,
+        html: "<iframe frameborder=\"0\" width=\"640\" height=\"360\" src=\"http://api.dmcloud.net/player/embed/{{remote_id}}?exported=1\"></iframe>"
       }
     },
 

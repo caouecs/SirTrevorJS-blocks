@@ -64,7 +64,7 @@ SirTrevor.Blocks.Video = (function(){
       cplus: {
         regex: /canalplus.fr\/embed\/\?param=cplus&vid=(.+)"><\/iframe/,
         html: "<iframe width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" src=\"http://player.canalplus.fr/embed/?param=cplus&amp;vid={{remote_id}}\"></iframe>"
-      }
+      },
       francetv: {
         regex: /api.dmcloud.net\/player\/embed\/(.+)?exported=1/,
         html: "<iframe frameborder=\"0\" width=\"640\" height=\"360\" src=\"http://api.dmcloud.net/player/embed/{{remote_id}}?exported=1\"></iframe>"

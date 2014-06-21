@@ -5,7 +5,9 @@ Blocks for different uses
 
  * Facebook : embed post from Facebook
  * Gettyimages : embed images from Getty
+ * Issuu : embed presentation from Issuu
  * Pinterest : embed pin from Pinterest
+ * Sketchfab
  * Slideshare : embed slide from Slideshare
  * Spotify : embed track from Spotify
  * Video : for more providers (vevo, veho, yahoo...)
@@ -96,6 +98,10 @@ Blocks for different uses
  * http://youtu.be/_E5M_uU5OB4
 
 ## Changelog
+
+* v0.2.0
+    * add issuu presentation
+    * add sketchfab
 
 * v0.1.1
     * add canal plus video

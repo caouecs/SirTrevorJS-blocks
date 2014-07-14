@@ -68,6 +68,14 @@ SirTrevor.Blocks.Video = (function(){
       francetv: {
         regex: /api.dmcloud.net\/player\/embed\/(.+)?exported=1/,
         html: "<iframe frameborder=\"0\" width=\"640\" height=\"360\" src=\"http://api.dmcloud.net/player/embed/{{remote_id}}?exported=1\"></iframe>"
+      },
+      zoomin: {
+        regex: /zoomin.tv(?:.*)\/video\/([[:alnum:]]*)\//,
+        html: "<iframe src=\"http://blackbird.zoomin.tv/players/.pla?pid=corporatefr&amp;id={{remote_id}}&amp;w=655&amp;h=433\" style=\"width:655px; height:433px; border:none; overflow:hidden;\" frameborder=\"0\" scrolling=\"no\" allowtransparency=\"yes\"></iframe>"
+      },
+      globalnews: {
+        regex: /globalnews.ca\/video(?:\/embed)?\/([[:alnum:]]*)\//,
+        html: "<iframe src=\"http://globalnews.ca/video/embed/{{remote_id}}/\" width=\"670\" height=\"437\" frameborder=\"0\" allowfullscreen></iframe>"
       }
     },
 

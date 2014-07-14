@@ -18,6 +18,7 @@ Blocks for different uses
  * canal plus
  * daily mail uk
  * dailymotion
+ * global news
  * metacafe
  * metatube
  * ustream (live and recorded)

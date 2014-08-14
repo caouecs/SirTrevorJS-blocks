@@ -76,6 +76,10 @@ SirTrevor.Blocks.Video = (function(){
       globalnews: {
         regex: /globalnews.ca\/video(?:\/embed)?\/([[:alnum:]]*)\//,
         html: "<iframe src=\"http://globalnews.ca/video/embed/{{remote_id}}/\" width=\"670\" height=\"437\" frameborder=\"0\" allowfullscreen></iframe>"
+      },
+      nhl: {
+        regex: /nhl.com\/videocenter\/(?:console\?id=)|(?:embed\?playlist=)([[:digit:]]*)/,
+        html: "<iframe src=\"http://video.nhl.com/videocenter/embed?playlist={{remote_id}}\" frameborder=\"0\" width=\"640\" height=\"395\"></iframe>"
       }
     },
 

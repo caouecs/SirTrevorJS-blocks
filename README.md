@@ -9,6 +9,7 @@ Blocks for different uses
  * Pinterest : embed pin from Pinterest
  * Sketchfab
  * Slideshare : embed slide from Slideshare
+ * Soundcloud
  * Spotify : embed track from Spotify
  * Video : for more providers (vevo, veho, yahoo...)
 
@@ -21,6 +22,7 @@ Blocks for different uses
  * global news
  * metacafe
  * metatube
+ * nhl
  * ustream (live and recorded)
  * veoh
  * vevo
@@ -56,6 +58,11 @@ Blocks for different uses
 #### Metatube
 
  * http://www.metatube.com/en/videos/228366/OMG-Superman-Baby/
+
+#### NHL.com
+
+ * http://video.coyotes.nhl.com/videocenter/console?id=629354
+ * http://video.nhl.com/videocenter/embed?playlist=629354&source=coyotes
 
 #### UStream.tv Live
 

@@ -20,6 +20,7 @@ Blocks for different uses
  * daily mail uk
  * dailymotion
  * global news
+ * livestream
  * metacafe
  * metatube
  * nhl
@@ -39,7 +40,7 @@ Blocks for different uses
 
 #### Canal Plus
 
-  need embed code
+ * need embed code
 
 #### Daily Mail UK
 
@@ -49,6 +50,10 @@ Blocks for different uses
 
  * http://www.dailymotion.com/video/x1hu8aw_les-meilleurs-moments-saison-13-14-partie-3_sport
  * https://dai.ly/x1hu8aw
+
+#### Livestream
+
+ * <iframe src="http://new.livestream.com/accounts/3090519/events/3357293/videos/61157214/player?autoPlay=false&height=360&mute=false&width=640" width="640" height="360" frameborder="0" scrolling="no"></iframe>
 
 #### Metacafe
 

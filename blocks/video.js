@@ -80,6 +80,14 @@ SirTrevor.Blocks.Video = (function(){
       nhl: {
         regex: /nhl.com\/videocenter\/(?:console\?id=)|(?:embed\?playlist=)([[:digit:]]*)/,
         html: "<iframe src=\"http://video.nhl.com/videocenter/embed?playlist={{remote_id}}\" frameborder=\"0\" width=\"640\" height=\"395\"></iframe>"
+      },
+      livestream: {
+        regex: /new.livestream.com\/accounts\/(.+)\/player/,
+        html: "<iframe src=\"http://new.livestream.com/accounts/{{remote_id}}/player?autoPlay=false&height=360&mute=false&width=640\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\"></iframe>"
+      },
+      ooyala: {
+        regex: /ooyala.com\/iframe.js#pbid=(.+)"/,
+        html: "<script height=\"349px\" width=\"620px\" src=\"http://player.ooyala.com/iframe.js#pbid={{remote_id}}\"></script>"
       }
     },
 

@@ -9,8 +9,8 @@ SirTrevor.Blocks.Pinterest = (function(){
       }
     },
 
-    type: 'pinterest',
-    title: 'Pinterest',
+    type: "pinterest",
+    title: "Pinterest",
 
     pastable: true,
 
@@ -18,14 +18,14 @@ SirTrevor.Blocks.Pinterest = (function(){
       html: "<div style=\"text-align:center; padding:20px;\"><b>Pinterest</b><input type=\"text\" class=\"st-paste-block\" style=\"width: 100%\" placeholder=\"Enter code for Wordpress\"></div>"
     },
 
-    icon_name: 'image',
+    icon_name: "image",
 
     loadData: function(data) {
 
       if (!this.providers.hasOwnProperty(data.source)) { return; }
 
       var embed_string = this.providers[data.source].html
-        .replace('{{remote_id}}', data.remote_id);
+        .replace("{{remote_id}}", data.remote_id);
 
       this.$editor.html(embed_string);
     },
@@ -56,7 +56,7 @@ SirTrevor.Blocks.Pinterest = (function(){
     },
 
     onDrop: function(transferData){
-      var url = transferData.getData('text/plain');
+      var url = transferData.getData("text/plain");
       this.handleDropPaste(url);
     }
   });

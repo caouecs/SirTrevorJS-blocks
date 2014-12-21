@@ -91,29 +91,29 @@ SirTrevor.Blocks.Video = (function(){
       }
     },
 
-    type: 'video',
-    title: function() { return i18n.t('blocks:video:title'); },
+    type: "video",
+    title: function() { return i18n.t("blocks:video:title"); },
 
     droppable: true,
     pastable: true,
 
-    icon_name: 'video',
+    icon_name: "video",
 
     loadData: function(data){
       if (!this.providers.hasOwnProperty(data.source)) { return; }
 
       if (this.providers[data.source].square) {
-        this.$editor.addClass('st-block__editor--with-square-media');
+        this.$editor.addClass("st-block__editor--with-square-media");
       } else {
-        this.$editor.addClass('st-block__editor--with-sixteen-by-nine-media');
+        this.$editor.addClass("st-block__editor--with-sixteen-by-nine-media");
       }
 
-      var embed_string = this.providers[data.source].html
-        .replace('{{protocol}}', window.location.protocol)
-        .replace('{{remote_id}}', data.remote_id)
-        .replace('{{width}}', this.$editor.width()); // for videos that can't resize automatically like vine
+      var embedString = this.providers[data.source].html
+        .replace("{{protocol}}", window.location.protocol)
+        .replace("{{remote_id}}", data.remote_id)
+        .replace("{{width}}", this.$editor.width()); // for videos that can't resize automatically like vine
 
-      this.$editor.html(embed_string);
+      this.$editor.html(embedString);
     },
 
     onContentPasted: function(event){
@@ -142,7 +142,7 @@ SirTrevor.Blocks.Video = (function(){
     },
 
     onDrop: function(transferData){
-      var url = transferData.getData('text/plain');
+      var url = transferData.getData("text/plain");
       this.handleDropPaste(url);
     }
   });

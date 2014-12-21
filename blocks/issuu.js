@@ -7,8 +7,8 @@ SirTrevor.Blocks.Issuu = (function(){
       html: "<div data-configid=\"{{remote_id}}\" style=\"width: 525px; height: 353px;\" class=\"issuuembed\"></div><script type=\"text/javascript\" src=\"//e.issuu.com/embed.js\" async=\"true\"></script>"
     },
 
-    type: 'issuu',
-    title: 'Issuu',
+    type: "issuu",
+    title: "Issuu",
 
     pastable: true,
 
@@ -16,12 +16,12 @@ SirTrevor.Blocks.Issuu = (function(){
       html: "<div style=\"text-align:center; padding:20px;\">Enter <b>Issuu</b> link for embed code<br /><input type=\"text\" class=\"st-paste-block\" style=\"width: 100%\"></div>"
     },
 
-    icon_name: 'image',
+    icon_name: "image",
 
     loadData: function(data) {
 
       var embed_string = this.provider.html
-        .replace('{{remote_id}}', data.remote_id);
+        .replace("{{remote_id}}", data.remote_id);
 
       this.$editor.html(embed_string);
     },
@@ -45,7 +45,7 @@ SirTrevor.Blocks.Issuu = (function(){
     },
 
     onDrop: function(transferData){
-      var url = transferData.getData('text/plain');
+      var url = transferData.getData("text/plain");
       this.handleDropPaste(url);
     }
   });

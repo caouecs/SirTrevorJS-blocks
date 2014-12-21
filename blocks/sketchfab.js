@@ -7,8 +7,8 @@ SirTrevor.Blocks.Sketchfab = (function(){
       html: "<div style=\"text-align:center;\"><iframe  allowFullScreen webkitallowfullscreen mozallowfullscreen src=\"https://sketchfab.com/models/{{remote_id}}/embed\" width=\"640\" height=\"480\" frameborder=\"0\" scrolling=\"no\"></iframe></div>"
     },
 
-    type: 'sketchfab',
-    title: 'Sketchfab',
+    type: "sketchfab",
+    title: "Sketchfab",
 
     pastable: true,
 
@@ -16,12 +16,12 @@ SirTrevor.Blocks.Sketchfab = (function(){
       html: "<div style=\"text-align:center; padding:20px;\">Enter <b>Sketchfab</b> embed code<br /><input type=\"text\" class=\"st-paste-block\" style=\"width: 100%\"></div>"
     },
 
-    icon_name: 'image',
+    icon_name: "image",
 
     loadData: function(data) {
 
       var embed_string = this.provider.html
-        .replace('{{remote_id}}', data.remote_id);
+        .replace("{{remote_id}}", data.remote_id);
 
       this.$editor.html(embed_string);
     },
@@ -45,7 +45,7 @@ SirTrevor.Blocks.Sketchfab = (function(){
     },
 
     onDrop: function(transferData){
-      var url = transferData.getData('text/plain');
+      var url = transferData.getData("text/plain");
       this.handleDropPaste(url);
     }
   });

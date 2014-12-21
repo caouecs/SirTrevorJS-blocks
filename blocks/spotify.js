@@ -7,8 +7,8 @@ SirTrevor.Blocks.Spotify = (function(){
       html: "<iframe src=\"https://embed.spotify.com/?uri=spotify:track:{{remote_id}}\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\"></iframe>"
     },
 
-    type: 'spotify',
-    title: 'Spotify',
+    type: "spotify",
+    title: "Spotify",
 
     pastable: true,
 
@@ -16,16 +16,16 @@ SirTrevor.Blocks.Spotify = (function(){
       html: "<div style=\"text-align:center; padding:20px;\">Enter <b>Spotify</b> link of track<br /><input type=\"text\" class=\"st-paste-block\" style=\"width: 100%\"></div>"
     },
 
-    icon_name: 'image',
+    icon_name: "image",
 
     loadData: function(data) {
 
-      this.$editor.addClass('st-block__editor--with-square-media');
+      this.$editor.addClass("st-block__editor--with-square-media");
 
-      var embed_string = this.provider.html
-        .replace('{{remote_id}}', data.remote_id);
+      var embedString = this.provider.html
+        .replace("{{remote_id}}", data.remote_id);
 
-      this.$editor.html(embed_string);
+      this.$editor.html(embedString);
     },
 
     onContentPasted: function(event){
@@ -47,7 +47,7 @@ SirTrevor.Blocks.Spotify = (function(){
     },
 
     onDrop: function(transferData){
-      var url = transferData.getData('text/plain');
+      var url = transferData.getData("text/plain");
       this.handleDropPaste(url);
     }
   });

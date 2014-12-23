@@ -1,6 +1,8 @@
 SirTrevorJS-blocks
 ==================
 
+ > These blocks are compatible with version 0.3, not yet 0.4
+
 Blocks for different uses
 
  * Facebook : embed post from Facebook
